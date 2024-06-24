@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 20px; /* Added padding for smaller screens */
 
 	.card {
 		width: 50%;
@@ -83,5 +84,75 @@
 				}
 			}
 		}
+	}
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+	.register .card {
+		width: 70%;
+	}
+}
+
+@media (max-width: 992px) {
+	.register .card {
+		width: 90%;
+	}
+
+	.register .card .left h1 {
+		font-size: 80px;
+		line-height: 80px;
+	}
+
+	.register .card .left button,
+	.register .card .right form button {
+		width: 70%;
+	}
+}
+
+@media (max-width: 768px) {
+	.register {
+		height: auto; /* Adjust height for smaller screens */
+		padding: 10px;
+	}
+
+	.register .card {
+		flex-direction: column;
+		width: 100%;
+		min-height: auto;
+	}
+
+	.register .card .left,
+	.register .card .right {
+		padding: 20px;
+	}
+
+	.register .card .left h1 {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	.register .card .right {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 576px) {
+	.register .card .left h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.register .card .left {
+		gap: 20px;
+	}
+
+	.register .card .right {
+		gap: 20px;
+	}
+
+	.register .card .left button,
+	.register .card .right form button {
+		width: 100%;
 	}
 }

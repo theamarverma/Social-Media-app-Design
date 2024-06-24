@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 20px; /* Added padding for smaller screens */
 
 	.card {
 		width: 50%;
@@ -82,5 +83,75 @@
 				}
 			}
 		}
+	}
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+	.login .card {
+		width: 70%;
+	}
+}
+
+@media (max-width: 992px) {
+	.login .card {
+		width: 90%;
+	}
+
+	.login .card .left h1 {
+		font-size: 80px;
+		line-height: 80px;
+	}
+
+	.login .card .left button,
+	.login .card .right form button {
+		width: 70%;
+	}
+}
+
+@media (max-width: 768px) {
+	.login {
+		height: auto; /* Adjust height for smaller screens */
+		padding: 10px;
+	}
+
+	.login .card {
+		flex-direction: column;
+		width: 100%;
+		min-height: auto;
+	}
+
+	.login .card .left,
+	.login .card .right {
+		padding: 20px;
+	}
+
+	.login .card .left h1 {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	.login .card .right {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 576px) {
+	.login .card .left h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.login .card .left {
+		gap: 20px;
+	}
+
+	.login .card .right {
+		gap: 20px;
+	}
+
+	.login .card .left button,
+	.login .card .right form button {
+		width: 100%;
 	}
 }
